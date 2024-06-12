@@ -1,17 +1,26 @@
 {
-  "name": "project-generator",
-  "version": "1.0.0",
-  "description": "",
+  "name": "boilerplate-buddy",
+  "version": "1.0.1",
+  "description": "A CLI tool to generate project boilerplate.",
   "main": "dist/index.js",
   "bin": {
-    "generate": "./dist/cli.js"
+    "generate": "./dist/bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/cli.ts"
+    "start": " src/cli.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "project",
+    "generator",
+    "boilerplate",
+    "cli"
+  ],
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "author": "Matthew alexislordqtest@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",

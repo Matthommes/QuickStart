@@ -6,15 +6,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateProject = void 0;
 const child_process_1 = require("child_process");
 const fs_extra_1 = __importDefault(require("fs-extra"));
-const path_1 = __importDefault(require("path"));
+const node_path_1 = __importDefault(require("node:path"));
 const generateProject = (name, template) => {
-    const projectPath = path_1.default.join(process.cwd(), name);
+    const projectPath = node_path_1.default.join(process.cwd(), name);
     if (fs_extra_1.default.existsSync(projectPath)) {
         console.error(`Project ${name} already exists.`);
         process.exit(1);
     }
     fs_extra_1.default.mkdirSync(projectPath);
-    const templatePath = path_1.default.join(__dirname, "../templates", template);
+    const templatePath = node_path_1.default.join(__dirname, "../templates", template);
     if (!fs_extra_1.default.existsSync(templatePath)) {
         console.error(`Template ${template} does not exists.`);
         process.exit(1);

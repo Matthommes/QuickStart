@@ -10,8 +10,8 @@ export const generateProject = (name: string, template: string) => {
   }
 
   fs.mkdirSync(projectPath);
-  const templatePath = path.join(__dirname, "../templates", template);
-
+  const templatePath = path.join(__dirname, "../templates/", template);
+ console.log(templatePath)
   if (!fs.existsSync(templatePath)) {
     console.error(`Template ${template} does not exists.`);
     process.exit(1);
